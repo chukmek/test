@@ -5,7 +5,8 @@
 //images folder
 var im='images/';
 
-var fonts = {};
+var fonts = {};    fonts['oswald']='<link href=\'http://fonts.googleapis.com/css?family=Oswald:400,300,700\' rel=\'stylesheet\' type=\'text/css\'>';
+
 var opts = {};
 var resources = [
 ];
@@ -34,6 +35,22 @@ var symbols = {
                 rect: ['0px', '0px','1700px','723px','auto', 'auto'],
                 opacity: 0,
                 fill: ["rgba(0,0,0,0)",im+"2_size.jpg",'0px','0px']
+            },
+            {
+                id: 'Text2',
+                type: 'text',
+                rect: ['387px', '147px','344px','240px','auto', 'auto'],
+                text: "TELLING AN ENGAGING BRAND STORY ACROSS MULTIPLE SOCIAL SERVICES IS A SHOT <br>IN THE DARK.",
+                align: "left",
+                font: ['oswald', 38, "rgba(255,255,255,1.00)", "300", "none", "normal"]
+            },
+            {
+                id: 'Text2Copy',
+                type: 'text',
+                rect: ['387px', '69px','344px','240px','auto', 'auto'],
+                text: "WE GET IT.",
+                align: "left",
+                font: ['oswald', 48, "rgba(255,255,255,1.00)", "500", "none", "normal"]
             },
             {
                 id: 'box_twitt',
@@ -71,41 +88,65 @@ var symbols = {
         },
     states: {
         "Base State": {
+            "${_box_inst}": [
+                ["style", "left", '1243px'],
+                ["style", "top", '-125px']
+            ],
+            "${_box_tube}": [
+                ["style", "left", '759px'],
+                ["style", "top", '-156px']
+            ],
+            "${_box_twitt}": [
+                ["style", "left", '843px'],
+                ["style", "top", '-178px']
+            ],
+            "${_box_face}": [
+                ["style", "left", '1095px'],
+                ["style", "top", '-136px']
+            ],
             "${_bg}": [
                 ["style", "left", '0px'],
                 ["style", "top", '0px']
             ],
-            "${_box_inst}": [
-                ["style", "left", '1243px'],
-                ["style", "top", '-125px']
+            "${_Text2Copy}": [
+                ["style", "line-height", '48px'],
+                ["style", "letter-spacing", '1px'],
+                ["color", "color", 'rgba(255,255,255,1.00)'],
+                ["style", "font-weight", '500'],
+                ["style", "left", '387px'],
+                ["style", "font-size", '48px'],
+                ["style", "top", '69px'],
+                ["style", "font-family", 'oswald'],
+                ["style", "word-spacing", '0px'],
+                ["style", "width", '344px']
+            ],
+            "${__2_size}": [
+                ["style", "top", '0px'],
+                ["style", "opacity", '0'],
+                ["style", "left", '0px']
+            ],
+            "${_Text2}": [
+                ["style", "line-height", '48px'],
+                ["style", "letter-spacing", '1px'],
+                ["color", "color", 'rgba(255,255,255,1.00)'],
+                ["style", "font-weight", '300'],
+                ["style", "left", '387px'],
+                ["style", "font-size", '38px'],
+                ["style", "top", '147px'],
+                ["style", "font-family", 'oswald'],
+                ["style", "word-spacing", '0px'],
+                ["style", "width", '344px']
             ],
             "${_box_fliptu}": [
                 ["style", "top", '-205px'],
                 ["style", "opacity", '1'],
                 ["style", "left", '962px']
             ],
-            "${_box_twitt}": [
-                ["style", "left", '843px'],
-                ["style", "top", '-178px']
-            ],
             "${_Stage}": [
                 ["color", "background-color", 'rgba(255,255,255,1)'],
                 ["style", "width", '1700px'],
                 ["style", "height", '723px'],
                 ["style", "overflow", 'hidden']
-            ],
-            "${_box_tube}": [
-                ["style", "left", '759px'],
-                ["style", "top", '-156px']
-            ],
-            "${_box_face}": [
-                ["style", "left", '1095px'],
-                ["style", "top", '-136px']
-            ],
-            "${__2_size}": [
-                ["style", "top", '0px'],
-                ["style", "opacity", '0'],
-                ["style", "left", '0px']
             ]
         }
     },
